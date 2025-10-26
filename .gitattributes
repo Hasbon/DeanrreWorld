@@ -1,0 +1,44 @@
+# Configuración para compatibilidad entre Windows y Linux
+* text=auto
+
+# Scripts de shell deben usar LF
+*.sh text eol=lf
+
+# Scripts de Python
+*.py text eol=lf
+
+# JavaScript/TypeScript
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+
+# JSON
+*.json text eol=lf
+
+# Markdown
+*.md text eol=lf
+
+# CSS
+*.css text eol=lf
+
+# HTML
+*.html text eol=lf
+
+# Config files
+*.yml text eol=lf
+*.yaml text eol=lf
+*.txt text eol=lf
+
+# Configuración de Git
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# Archivos binarios
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+
