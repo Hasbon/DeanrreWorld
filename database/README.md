@@ -89,6 +89,35 @@ Scripts y documentación de la base de datos MongoDB para Deanrre.
 }
 ```
 
+## 🚀 Scripts de Importación
+
+### Convertir Excel a JSON y CSV
+
+```bash
+cd database/scripts
+python import_races.py
+```
+
+Este script:
+- Lee el archivo `Razas.xlsx`
+- Genera `Razas.csv`
+- Genera `Razas.json`
+- Muestra una vista previa de los datos
+
+### Importar a MongoDB
+
+```bash
+cd database/scripts
+python import_to_mongodb.py
+```
+
+Este script:
+- Lee `Razas.json`
+- Se conecta a MongoDB
+- Limpia la colección `races` existente
+- Inserta las nuevas razas
+- Muestra estadísticas
+
 ## 🌱 Seeds
 
 Los archivos en `seeds/` contienen datos iniciales para poblar la base de datos.
@@ -98,4 +127,4 @@ Los archivos en `seeds/` contienen datos iniciales para poblar la base de datos.
 - Base de datos: MongoDB
 - Puerto por defecto: 27017
 - Nombre de BD: deanrre
-
+- Asegúrate de tener MongoDB corriendo antes de importar
