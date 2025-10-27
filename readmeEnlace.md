@@ -1,95 +1,102 @@
-# 🔗 Configuración de Enlaces Clickeables para Cursor
+# Configuracion de Enlaces Clickeables para Cursor
 
-## 📋 Instrucciones Rápidas
+## Instrucciones Rapidas
 
 Para configurar enlaces clickeables que funcionen correctamente con Cursor, usa estas instrucciones:
 
-### 🎯 Formato de Enlaces
+### Formato de Enlaces
 
-**Para mostrar código con enlaces clickeables:**
+**Para mostrar codigo con enlaces clickeables:**
 
 ````markdown
-**Archivo:** `ruta/del/archivo` **Línea:**
-[Número de línea](cursor://file/RUTA_COMPLETA_ABSOLUTA:línea)
+**Archivo:** `ruta/del/archivo` **Linea:**
+[Numero de linea](cursor://file/RUTA_COMPLETA_ABSOLUTA:linea)
 
-```línea_inicio:línea_fin:ruta/del/archivo
-código aquí
+```linea_inicio:linea_fin:ruta/del/archivo
+codigo aqui
 ```
 ````
 
-```
-
-### 🛠️ Configuración del Workspace
+### Configuracion del Workspace
 
 **Ruta base del proyecto:**
 ```
+C:\Hasbon\Archivos\Escritorio\Familia\Daniel\ROL FAMILIA\DeanrreWebSite\deanrre
+```
 
-C:\Hasbon\Archivos\Escritorio\Familia\Daniel\Forja de codigo\spaSantaRosa\spasantarosa
+### Ejemplos de Uso
 
-````
-
-### 📝 Ejemplos de Uso
-
-**1. Enlace a línea específica:**
+**1. Enlace a linea especifica:**
 ```markdown
-[Línea 22](cursor://file/C:/Hasbon/Archivos/Escritorio/Familia/Daniel/Forja%20de%20codigo/spaSantaRosa/spasantarosa/src/componentes/componentesApp/seleccionservicios/seleccionservicios.css:22)
-````
+[Linea 22](cursor://file/C:/Hasbon/Archivos/Escritorio/Familia/Daniel/ROL%20FAMILIA/DeanrreWebSite/deanrre/README.md:22)
+```
 
-**2. Código citado con formato:**
+**2. Codigo citado con formato:**
 
 ````markdown
-```22:35:src/componentes/componentesApp/seleccionservicios/seleccionservicios.css
-.servicio-opcion {
-  display: flex;
-  /* resto del código */
-}
+```1:20:README.md
+# Deanrre - Mundo de Juego de Rol
+
+Un proyecto ambicioso y personal...
 ```
 ````
 
-```
+### Instruccion Rapida para IA
 
-### ⚡ Instrucción Rápida para IA
-
-**Copia y pega esta instrucción en futuros chats:**
+**Copia y pega esta instruccion en futuros chats:**
 
 ```
-
-CONFIGURACIÓN DE ENLACES: Estoy usando Cursor como editor. Cuando muestres código o hagas
+CONFIGURACION DE ENLACES: Estoy usando Cursor como editor. Cuando muestres codigo o hagas
 modificaciones, usa estos formatos:
 
 1. Enlaces clickeables:
-   cursor://file/C:/Hasbon/Archivos/Escritorio/Familia/Daniel/Forja%20de%20codigo/spaSantaRosa/spasantarosa/RUTA_RELATIVA:LÍNEA
+   cursor://file/C:/Hasbon/Archivos/Escritorio/Familia/Daniel/ROL%20FAMILIA/DeanrreWebSite/deanrre/RUTA_RELATIVA:LINEA
 
-2. Código citado: ```línea_inicio:línea_fin:ruta_relativa
+2. Codigo citado: ```linea_inicio:linea_fin:ruta_relativa
 
-3. Ruta base del proyecto: C:\Hasbon\Archivos\Escritorio\Familia\Daniel\Forja de
-   codigo\spaSantaRosa\spasantarosa
+3. Ruta base del proyecto: C:\Hasbon\Archivos\Escritorio\Familia\Daniel\ROL FAMILIA\DeanrreWebSite\deanrre
 
-Esto me permite hacer clic directamente en los enlaces y ir a la sección exacta del código.
-
+Esto me permite hacer clic directamente en los enlaces y ir a la seccion exacta del codigo.
 ```
 
-### 🔧 Troubleshooting
+### Troubleshooting
 
 **Si los enlaces no funcionan:**
 1. Verificar que la ruta absoluta sea correcta
-2. Asegurarse de que los espacios estén codificados como `%20`
+2. Asegurarse de que los espacios esten codificados como `%20`
 3. Confirmar que el archivo existe en la ruta especificada
 
-### 📁 Estructura del Proyecto
+### Estructura del Proyecto
 
 ```
-
-spasantarosa/ ├── src/ │ ├── componentes/ │ │ └── componentesApp/ │ │ ├── seleccionservicios/ │ │ │
-└── seleccionservicios.css │ │ └── intalaciones/ │ │ └── instalaciones.css │ ├── views/ │ └── ...
-└── ...
-
+deanrre/
+├── frontend/          # Aplicacion React
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── services/
+│       └── styles/
+├── backend/          # API Python
+│   ├── app/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   └── schemas/
+│   └── venv/
+├── database/         # MongoDB
+│   ├── Razas.json
+│   ├── Razas.csv
+│   └── scripts/
+├── docs/             # Documentacion
+│   └── LORE/
+└── README.md
 ```
 
 ---
 
-**Fecha de creación:** $(Get-Date)
+**Fecha de creacion:** 2024
 **Editor:** Cursor
-**Sistema:** Windows 10
-**Proyecto:** Spa Santa Rosa
-```
+**Sistema:** Windows 10 / Linux compatible
+**Proyecto:** Deanrre - Mundo de Juego de Rol
+**GitHub:** https://github.com/Hasbon/DeanrreWorld

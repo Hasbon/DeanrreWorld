@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "total_records": 20,
+    "source": "profesiones.js",
+    "description": "Profesiones del mundo de Deanrre"
+  },
+  "data": [
+    {
+      "id": 1,
+      "clase": "ASESINO",
+      "d10": "JUEGO DE MANOS",
+      "d8": "SIGILO",
+      "d6": "CARRERA",
+      "d4": "ESQUIVAR"
+    },
+    {
+      "id": 2,
+      "clase": "CLERIGO",
+      "d10": "MEDICINA",
+      "d8": "ARCANO",
+      "d6": "PERSPICACIA",
+      "d4": "RELIGION"
+    },
+    {
+      "id": 3,
+      "clase": "GUARDIAN",
+      "d10": "BLOQUEO",
+      "d8": "RESILIENCIA",
+      "d6": "ATLETISMO",
+      "d4": "CARRERA"
+    },
+    {
+      "id": 4,
+      "clase": "ESPIA",
+      "d10": "ENGAÑO",
+      "d8": "INTERPRETACION",
+      "d6": "INVESTIGACION",
+      "d4": "SIGILO"
+    },
+    {
+      "id": 5,
+      "clase": "INGENIERO",
+      "d10": "INVENTAR",
+      "d8": "SUPERVIVENCIA",
+      "d6": "COMERCIO",
+      "d4": "INVESTIGACION"
+    },
+    {
+      "id": 6,
+      "clase": "MAGO",
+      "d10": "ARCANO",
+      "d8": "HISTORIA",
+      "d6": "INVENTAR",
+      "d4": "TRAYECTORIA"
+    },
+    {
+      "id": 7,
+      "clase": "PIRATA",
+      "d10": "INTIMIDACION",
+      "d8": "ENGAÑO",
+      "d6": "PERSPICACIA",
+      "d4": "JUEGO DE MANOS"
+    },
+    {
+      "id": 8,
+      "clase": "LADRON",
+      "d10": "JUEGO DE MANOS",
+      "d8": "ACROBACIA",
+      "d6": "SIGILO",
+      "d4": "ATLETISMO"
+    },
+    {
+      "id": 9,
+      "clase": "DOMADOR BESTIAS",
+      "d10": "TRATO CON ANIMALES",
+      "d8": "SUPERVIVENCIA",
+      "d6": "MONTURA",
+      "d4": "VISION"
+    },
+    {
+      "id": 10,
+      "clase": "GUERRERO",
+      "d10": "ATLETISMO",
+      "d8": "CARRERA",
+      "d6": "JUEGO DE MANOS",
+      "d4": "INTIMIDACION"
+    },
+    {
+      "id": 11,
+      "clase": "INVOCADOR",
+      "d10": "ARCANO",
+      "d8": "HISTORIA",
+      "d6": "RESILIENCIA",
+      "d4": "TRATO CON ANIMALES"
+    },
+    {
+      "id": 12,
+      "clase": "TRAMPERO",
+      "d10": "INVENTAR",
+      "d8": "PERSPICACIA",
+      "d6": "TRAYECTORIA",
+      "d4": "SUPERVIVENCIA"
+    },
+    {
+      "id": 13,
+      "clase": "BRUJO VUDU",
+      "d10": "INVENTAR",
+      "d8": "ARCANO",
+      "d6": "MEDICINA",
+      "d4": "HISTORIA"
+    },
+    {
+      "id": 14,
+      "clase": "ILUSIONISTA",
+      "d10": "PERSUACION",
+      "d8": "ENGAÑO",
+      "d6": "ARCANO",
+      "d4": "APRENDER"
+    },
+    {
+      "id": 15,
+      "clase": "POLITICO",
+      "d10": "PERSUACION",
+      "d8": "PERCEPCION",
+      "d6": "HISTORIA",
+      "d4": "COMERCIO"
+    },
+    {
+      "id": 16,
+      "clase": "DRUIDA",
+      "d10": "SUPERVIVENCIA",
+      "d8": "TRATO CON ANIMALES",
+      "d6": "CARRERA",
+      "d4": "MONTURA"
+    },
+    {
+      "id": 17,
+      "clase": "ARQUERO",
+      "d10": "TRAYECTORIA",
+      "d8": "VISION",
+      "d6": "JUEGO DE MANOS",
+      "d4": "ACROBACIA"
+    },
+    {
+      "id": 18,
+      "clase": "ESPADACHIN",
+      "d10": "JUEGO DE MANOS",
+      "d8": "ESQUIVAR",
+      "d6": "BLOQUEO",
+      "d4": "CARRERA"
+    },
+    {
+      "id": 19,
+      "clase": "BARDO",
+      "d10": "PERSUACION",
+      "d8": "ARCANO",
+      "d6": "ENGAÑO",
+      "d4": "PERSPICACIA"
+    },
+    {
+      "id": 20,
+      "clase": "MONJE",
+      "d10": "ACROBACIA",
+      "d8": "JUEGO DE MANOS",
+      "d6": "ESQUIVAR",
+      "d4": "RESILIENCIA"
+    }
+  ]
+}
+

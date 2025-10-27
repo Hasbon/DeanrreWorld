@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "description": "Acciones y habilidades del juego de rol Deanrre",
+    "total_acciones": 29
+  },
+  "data": [
+    {
+      "accion": "ACROBACIA",
+      "estadistica": "Agilidad",
+      "tipo": "coordinacion"
+    },
+    {
+      "accion": "ARCANO",
+      "estadistica": "Concentracion",
+      "tipo": "mental"
+    },
+    {
+      "accion": "ATLETISMO",
+      "estadistica": "Fuerza",
+      "tipo": "fisico"
+    },
+    {
+      "accion": "APRENDER",
+      "estadistica": "Sabiduria",
+      "tipo": "mental"
+    },
+    {
+      "accion": "BLOQUEO",
+      "estadistica": "Agilidad",
+      "tipo": "coordinacion"
+    },
+    {
+      "accion": "CARRERA",
+      "estadistica": "Velocidad",
+      "tipo": "fisico"
+    },
+    {
+      "accion": "COMERCIO",
+      "estadistica": "Voluntad",
+      "tipo": "mental"
+    },
+    {
+      "accion": "ENGAÑO",
+      "estadistica": "Inteligencia",
+      "tipo": "mental"
+    },
+    {
+      "accion": "ESQUIVAR",
+      "estadistica": "Reflejos",
+      "tipo": "coordinacion"
+    },
+    {
+      "accion": "HISTORIA",
+      "estadistica": "Sabiduria",
+      "tipo": "mental"
+    },
+    {
+      "accion": "INTERPRETACION",
+      "estadistica": "Inteligencia",
+      "tipo": "mental"
+    },
+    {
+      "accion": "INVENTAR",
+      "estadistica": "Inteligencia",
+      "tipo": "mental"
+    },
+    {
+      "accion": "INTIMIDACION",
+      "estadistica": "Voluntad",
+      "tipo": "mental"
+    },
+    {
+      "accion": "INVESTIGACION",
+      "estadistica": "Inteligencia",
+      "tipo": "mental"
+    },
+    {
+      "accion": "INMUNIDAD",
+      "estadistica": "Resistencia",
+      "tipo": "fisico"
+    },
+    {
+      "accion": "JUEGO DE MANOS",
+      "estadistica": "Agilidad",
+      "tipo": "coordinacion"
+    },
+    {
+      "accion": "MEDICINA",
+      "estadistica": "Sabiduria",
+      "tipo": "mental"
+    },
+    {
+      "accion": "MONTURA",
+      "estadistica": "Agilidad",
+      "tipo": "coordinacion"
+    },
+    {
+      "accion": "PERCEPCION",
+      "estadistica": "Rango",
+      "tipo": "coordinacion"
+    },
+    {
+      "accion": "PERSPICACIA",
+      "estadistica": "Concentracion",
+      "tipo": "mental"
+    },
+    {
+      "accion": "PERSUACION",
+      "estadistica": "Voluntad",
+      "tipo": "mental"
+    },
+    {
+      "accion": "RELIGION",
+      "estadistica": "Sabiduria",
+      "tipo": "mental"
+    },
+    {
+      "accion": "RESILIENCIA",
+      "estadistica": "Voluntad",
+      "tipo": "mental"
+    },
+    {
+      "accion": "SIGILO",
+      "estadistica": "Agilidad",
+      "tipo": "coordinacion"
+    },
+    {
+      "accion": "SUPERVIVENCIA",
+      "estadistica": "Sabiduria",
+      "tipo": "mental"
+    },
+    {
+      "accion": "TRATO CON ANIMALES",
+      "estadistica": "Voluntad",
+      "tipo": "mental"
+    },
+    {
+      "accion": "TRAYECTORIA",
+      "estadistica": "Calculo",
+      "tipo": "coordinacion"
+    },
+    {
+      "accion": "VISION",
+      "estadistica": "Presicion",
+      "tipo": "coordinacion"
+    }
+  ]
+}
+
