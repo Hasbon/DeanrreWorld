@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import "./razas.css";
 
 type RazaStats = {
@@ -66,6 +66,40 @@ const RAZA_A_IMAGEN: Record<string, string> = {
 	CELESTIAL: "/imagenesRazas/celestial.webp",
 };
 
+const DESCRIPCION_RAZA: Record<string, string> = {
+    SLIME: "Los Slimes son entidades gelatinosas con gran adaptabilidad. Absorben rasgos del entorno, resistiendo impactos y filtrándose donde otros no pueden.",
+    ORCO: "Fuerza bruta y cultura de combate. Valoran la lealtad al clan, el honor y el liderazgo del más capaz.",
+    GOBLIN: "Ingeniosos y veloces, expertos en conseguir recursos y crear artilugios tan improvisados como efectivos.",
+    TRITON: "Dominan los reinos acuáticos. Disciplina, estrategia y equilibrio rigen su sociedad.",
+    HUMANO: "Versátiles y curiosos, aprenden rápido y prosperan en casi cualquier ámbito.",
+    ELFO: "Longevos, elegantes y reservados. Afinidad con la magia sutil y la naturaleza.",
+    ENANO: "Maestros artesanos y guerreros tenaces. Lealtad y deber forjados bajo la montaña.",
+    DROW: "Gracia letal y magia umbría. Intrigas y disciplina definen su cultura subterránea.",
+    REPTILIANO: "Instinto templado por sabiduría fría. Cazadores natos y guardianes de secretos antiguos.",
+    "BESTIA HUMANOIDE": "Espíritus indómitos que veneran la fuerza y la libertad en códigos tribales.",
+    "ELEMENTAL AGUA": "Adaptabilidad y curación. Fluidez mental y paciencia para modelar el curso de los hechos.",
+    "ELEMENTAL AIRE": "Libertad y velocidad. Pensamiento veloz y presencia etérea para explorar y evadir.",
+    "ELEMENTAL FUEGO": "Pasión y poder cambiante. Determinación incandescente para superar obstáculos.",
+    "ELEMENTAL TIERRA": "Estabilidad y propósito. Pilares inamovibles que protegen y sostienen.",
+    HADA: "Magia sutil y travesura. Belleza encantadora que esconde una astucia peligrosa.",
+    CAIDO: "Voluntad férrea marcada por cicatrices del alma. Buscan redención o poder en el umbral de la sombra.",
+    NOMUERTO: "Fríos y metódicos, desafían el ciclo natural con intelecto estratégico y persistencia.",
+    VAMPIRO: "Depredadores nocturnos de porte aristocrático. Carisma, agilidad y mente afilada.",
+    "HOMBRE BESTIA": "Instinto y técnica al servicio de la manada. Cazadores y protectores de su territorio.",
+    CELESTIAL: "Irradian propósito y luz. Inspiran a aliados y doblegan a enemigos con juramentos antiguos.",
+};
+
+type SelectedRaza = { nombre: string; imagen: string; descripcion: string } | null;
+
+function useEscClose(isOpen: boolean, onClose: () => void) {
+    useEffect(() => {
+        if (!isOpen) return;
+        const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+        window.addEventListener("keydown", handler);
+        return () => window.removeEventListener("keydown", handler);
+    }, [isOpen, onClose]);
+}
+
 const columnas: Array<keyof RazaStats> = [
 	"Razas",
 	"FUERZA",
@@ -101,14 +135,18 @@ const COLUMNA_A_GRUPO: Record<keyof RazaStats, Grupo> = {
 };
 
 const Razas = () => {
-	return (
+    const [seleccionada, setSeleccionada] = useState<SelectedRaza>(null);
+    const onClose = useCallback(() => setSeleccionada(null), []);
+    const abrirModal = useCallback((nombre: string) => {
+        const imagen = RAZA_A_IMAGEN[nombre];
+        const descripcion = DESCRIPCION_RAZA[nombre] ?? "Descripción no disponible.";
+        setSeleccionada({ nombre, imagen, descripcion });
+    }, []);
+    useEscClose(Boolean(seleccionada), onClose);
+    return (
 		<div className="razas-page">
 			<h2 className="razas-title">Razas y Estadísticas Base</h2>
-			<div className="razas-legend">
-				<span className="legend-item legend-fisico">Físico</span>
-				<span className="legend-item legend-coordinacion">Coordinación</span>
-				<span className="legend-item legend-mental">Mental</span>
-			</div>
+			
 			<div className="razas-table-wrapper">
 				<table className="razas-table">
 					<thead>
@@ -138,14 +176,17 @@ const Razas = () => {
 								<tr key={fila.Razas}>
 									<td className="raza-cell">
 										<div className="raza-cell-content">
-											{imgSrc && (
-												<img
-													src={imgSrc}
-													alt={fila.Razas}
-													className="raza-avatar"
-													loading="lazy"
-												/>
-											)}
+                                            {imgSrc && (
+                                                <img
+                                                    src={imgSrc}
+                                                    alt={fila.Razas}
+                                                    className="raza-avatar"
+                                                    loading="lazy"
+                                                    onClick={() => abrirModal(fila.Razas)}
+                                                    role="button"
+                                                    aria-label={`Ver ${fila.Razas}`}
+                                                />
+                                            )}
 											<span className="raza-name">{fila.Razas}</span>
 										</div>
 									</td>
@@ -167,6 +208,20 @@ const Razas = () => {
 					</tbody>
 				</table>
 			</div>
+		{seleccionada && (
+			<div className="modal-overlay" role="dialog" aria-modal="true" onClick={onClose}>
+				<div className="modal-content card-dark" onClick={(e) => e.stopPropagation()}>
+					<button className="modal-close" onClick={onClose} aria-label="Cerrar">×</button>
+					<div className="modal-body">
+						<img src={seleccionada.imagen} alt={seleccionada.nombre} className="modal-image" />
+						<div className="modal-text">
+							<h3 className="section-title glow">{seleccionada.nombre}</h3>
+							<p>{seleccionada.descripcion}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		)}
 		</div>
 	);
 };
