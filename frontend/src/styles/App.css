@@ -2,22 +2,72 @@
   text-align: center;
 }
 
+/* Paleta global */
+:root {
+  --color-bg-deep: #0b132b;      /* fondo base */
+  --color-bg-night: #1c2541;     /* fondo secundario */
+  --color-iron: #3a506b;         /* bordes/menús */
+  --color-amber: #f2a65a;        /* botones/resaltos */
+  --color-fire: #d76a03;         /* hover/alertas */
+  --color-energy: #00b4d8;       /* efectos mágicos */
+  --color-ethereal: #90e0ef;     /* brillos sutiles */
+  --color-warm-white: #f5f3f4;   /* texto principal sobre oscuro */
+  --color-soft-gray: #adb5bd;    /* texto secundario */
+}
+
+/* Fondo y tipografía base */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 800px at 20% 0%, var(--color-bg-night) 0%, var(--color-bg-deep) 60%) fixed;
+  color: var(--color-warm-white);
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografías temáticas */
+h1, .h1, .logo {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+h2, h3, .subtitle, .menu, .nav, .section-title {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+a {
+  color: var(--color-ethereal);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-energy);
+}
+.App {
+  text-align: center;
+}
+
 .App-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--color-bg-night) 0%, var(--color-bg-deep) 100%);
   padding: 60px 20px;
-  color: white;
+  color: var(--color-warm-white);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  border-bottom: 1px solid rgba(58, 80, 107, 0.6);
+  box-shadow: 0 0 40px rgba(0, 180, 216, 0.1) inset;
 }
 
 .App-header h1 {
   margin: 0;
   font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 12px rgba(0, 180, 216, 0.25);
 }
 
 .App-header p {
@@ -27,6 +77,42 @@
 
 .subtitle {
   font-size: 1rem;
-  opacity: 0.9;
+  color: var(--color-soft-gray);
+}
+
+/* Botón principal mágico */
+.btn-primary {
+  background: var(--color-amber);
+  color: #1a1a1a;
+  border: 1px solid rgba(58, 80, 107, 0.6);
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 0 0 0 rgba(0, 180, 216, 0);
+}
+
+.btn-primary:hover {
+  background: var(--color-fire);
+  transform: translateY(-1px);
+  box-shadow: 0 0 16px rgba(0, 180, 216, 0.3);
+}
+
+/* Tarjetas/oscuros */
+.card-dark {
+  background: var(--color-bg-night);
+  border: 1px solid var(--color-iron);
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Efecto brillo mágico */
+.glow {
+  text-shadow: 0 0 6px rgba(144, 224, 239, 0.35), 0 0 18px rgba(0, 180, 216, 0.25);
+}
+
+/* Contenedores con borde místico */
+.border-iron {
+  border: 1px solid var(--color-iron);
 }
 

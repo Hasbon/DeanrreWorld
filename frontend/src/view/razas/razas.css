@@ -1,0 +1,158 @@
+.razas-page {
+	width: 100%;
+	padding: 16px;
+	color: var(--color-warm-white);
+}
+
+.razas-title {
+	margin: 0 0 16px 0;
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--color-ethereal);
+	font-family: 'Cormorant Garamond', serif;
+}
+
+.razas-legend {
+	display: flex;
+	gap: 12px;
+	margin: 8px 0 12px 0;
+}
+
+.legend-item {
+	font-size: 12px;
+	padding: 4px 8px;
+	border-radius: 999px;
+	border: 1px solid var(--color-iron);
+	background: rgba(0,0,0,0.15);
+}
+
+.legend-fisico { color: var(--color-amber); }
+.legend-coordinacion { color: var(--color-energy); }
+.legend-mental { color: var(--color-ethereal); }
+
+.razas-table-wrapper {
+	overflow-x: auto;
+	background: var(--color-bg-night);
+	border-radius: 8px;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+	border: 1px solid var(--color-iron);
+}
+
+.razas-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 840px;
+}
+
+.razas-table thead th {
+	position: sticky;
+	top: 0;
+	background: var(--color-bg-night);
+	text-align: left;
+	font-weight: 600;
+	font-size: 13px;
+	color: var(--color-ethereal);
+	padding: 10px 12px;
+	border-bottom: 1px solid var(--color-iron);
+}
+
+/* Fila de grupos (encabezado superior) */
+.razas-table thead .group-row th {
+	position: sticky;
+	top: 0;
+	background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.05) 100%), var(--color-bg-night);
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.6px;
+	padding-top: 8px;
+	padding-bottom: 6px;
+}
+
+.razas-table thead .group-row th.group-none { background: transparent; border-bottom: none; }
+
+/* Tinte por grupo en la fila superior */
+.razas-table thead .group-row th.group-fisico {
+	background-color: rgba(242, 166, 90, 0.12);
+	border-bottom: 2px solid var(--color-amber);
+}
+.razas-table thead .group-row th.group-coordinacion {
+	background-color: rgba(0, 180, 216, 0.10);
+	border-bottom: 2px solid var(--color-energy);
+}
+.razas-table thead .group-row th.group-mental {
+	background-color: rgba(144, 224, 239, 0.10);
+	border-bottom: 2px solid var(--color-ethereal);
+}
+
+/* Encabezados por grupo */
+.razas-table thead th.group-fisico { border-bottom: 2px solid var(--color-amber); }
+.razas-table thead th.group-coordinacion { border-bottom: 2px solid var(--color-energy); }
+.razas-table thead th.group-mental { border-bottom: 2px solid var(--color-ethereal); }
+
+/* Tinte sutil en encabezados por grupo */
+.razas-table thead th.group-fisico { background-color: rgba(242, 166, 90, 0.08); }
+.razas-table thead th.group-coordinacion { background-color: rgba(0, 180, 216, 0.07); }
+.razas-table thead th.group-mental { background-color: rgba(144, 224, 239, 0.06); }
+
+.razas-table tbody td {
+	padding: 10px 12px;
+	border-bottom: 1px solid rgba(58, 80, 107, 0.6);
+	font-size: 13px;
+	color: var(--color-warm-white);
+}
+
+/* Celdas por grupo: acento lateral sutil */
+.razas-table tbody td.group-fisico { border-left: 2px solid rgba(242, 166, 90, 0.6); }
+.razas-table tbody td.group-coordinacion { border-left: 2px solid rgba(0, 180, 216, 0.6); }
+.razas-table tbody td.group-mental { border-left: 2px solid rgba(144, 224, 239, 0.6); }
+
+/* Tinte sutil en celdas por grupo */
+.razas-table tbody td.group-fisico { background-color: rgba(242, 166, 90, 0.05); }
+.razas-table tbody td.group-coordinacion { background-color: rgba(0, 180, 216, 0.05); }
+.razas-table tbody td.group-mental { background-color: rgba(144, 224, 239, 0.05); }
+
+/* Aumentar el tinte en hover por fila manteniendo el color del grupo */
+.razas-table tbody tr:hover td.group-fisico { background-color: rgba(242, 166, 90, 0.12); }
+.razas-table tbody tr:hover td.group-coordinacion { background-color: rgba(0, 180, 216, 0.12); }
+.razas-table tbody tr:hover td.group-mental { background-color: rgba(144, 224, 239, 0.12); }
+
+.razas-table tbody tr:hover {
+	background: rgba(0, 180, 216, 0.08);
+}
+
+.raza-cell {
+	white-space: nowrap;
+	text-align: left;
+}
+
+.raza-cell-content {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.raza-avatar {
+	width: 36px;
+	height: 36px;
+	object-fit: cover;
+	border-radius: 6px;
+	border: 1px solid var(--color-iron);
+	background: var(--color-bg-deep);
+}
+
+.raza-name {
+	font-weight: 600;
+	letter-spacing: 0.2px;
+	color: var(--color-warm-white);
+}
+
+@media (max-width: 768px) {
+	.razas-title {
+		font-size: 18px;
+	}
+	.razas-table {
+		min-width: 720px;
+	}
+}
+
+
